@@ -6,8 +6,7 @@ from time import sleep
 import psutil
 
 lcd = Adafruit_CharLCD()
-#cpu_usage = psutil.cpu_percent()
-#ram_usage = psutil.virtual_memory().percent
+
 while True:
 	cpu_usage = psutil.cpu_percent()
 	ram_usage = psutil.virtual_memory().percent
