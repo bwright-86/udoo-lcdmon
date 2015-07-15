@@ -1,0 +1,12 @@
+[Unit]
+Description=Use 16x2 lcd to monitor system info
+After=gpio.service
+
+[Service]
+ExecStart=/usr/bin/python /etc/systemd/scripts/udoo-lcdmon/udoo-lcdmon.py &
+Type=simple
+User=root
+GuessMainPID=no
+
+[Install]
+WantedBy=multi-user.target
